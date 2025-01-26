@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volumes
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: C:\Users\Ansible\Documentos
+      name: volume
+    - mountPath: /git
+      name: git
+      readOnly: true
+    - mountPath: /temp
+      name: temp
+  volumes:
+  - name: volume
+    hostPath:
+      path: /home/openshift/datos
+  - name: git
+    gitRepo:
+      repository: https://github.com/apasoftTraining/cursoopenshift.git
+  - name: temp
+    emptyDir: {}
