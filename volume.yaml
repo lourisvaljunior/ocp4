@@ -20,6 +20,6 @@ spec:
       path: /home/openshift/datos
   - name: git
     gitRepo:
-      repository: https://github.com/apasoftTraining/cursoopenshift.git
+      repository: https://github.com/lourisvaljunior/ocp4.git
   - name: temp
     emptyDir: {}
