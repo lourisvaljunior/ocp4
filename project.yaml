@@ -1,0 +1,14 @@
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  annotations:
+    openshift.io/description: descricao do projeto
+    openshift.io/display-name: Exemplo de criacao de um projeto Openshift
+    openshift.io/requester: developer
+    documentacion: Exemplo para criar um projeto openshift
+  name: project2
+  labels:
+     tipo: example
+spec:
+  finalizers:
+  - kubernetes
