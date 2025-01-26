@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-nginx
+  labels:
+    zona: nginx
+    version: v1
+  annotations:
+    description: description
+spec:
+  containers:
+    - name: nginx
+      image: nginx
